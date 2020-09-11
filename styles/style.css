@@ -186,18 +186,22 @@
 
 .info__inner {
     display: grid;
-    grid-template-areas: "info-list info-list info-ads";
+    grid-template-columns: 1fr/1fr;
+    grid-template-areas: "info-main info-main info-ads";
 }
 
 .info-list {
     display: grid;
     grid-template: 1fr/1fr;
-    row-gap: 155px;
     list-style-type: none;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    grid-area: info-list;
+}
+
+.info-list_main {
+    grid-area: info-main;
+    row-gap: 155px;
 }
 
 .info__item {
@@ -258,9 +262,7 @@
     padding: 0;
 }
 
-.info-ads {
-    grid-area: ads;
+.info-list_ads {
+    grid-area: info-ads;
     row-gap: 0;
-    display: grid;
-    grid-template: 1fr/1fr;
 }
